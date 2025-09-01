@@ -1,0 +1,328 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>FAQ - One Plant a Day</title>
+  <link href="no-wifi/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+  <link href="no-wifi/aos/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="no-wifi/fontawesome/css/all.css">
+  <link rel="stylesheet" href="css/base.css">
+  <link rel="stylesheet" href="css/faq.css">
+</head>
+
+<body>
+  <nav class="navbar navbar-expand-lg sticky-top">
+    <div class="container">
+      <a class="navbar-brand" href="index.html">
+        <i class="fas fa-seedling"></i>
+        One Plant a Day
+      </a>
+      <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+        <span class="navbar-toggler-icon"></span>
+      </button>
+      <div class="collapse navbar-collapse" id="navbarNav">
+        <ul class="navbar-nav ms-auto">
+          <li class="nav-item">
+            <a class="nav-link" href="index.html">
+              <i class="fas fa-home"></i> Home
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="today.html">
+              <i class="fas fa-calendar-day"></i> Today's Plant
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="calendar.html">
+              <i class="fas fa-calendar"></i> Calendar
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="about.html">
+              <i class="fas fa-info-circle"></i> About Us
+            </a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link active" href="faq.html">
+              <i class="fas fa-question-circle"></i> FAQ
+            </a>
+          </li>
+        </ul>
+      </div>
+    </div>
+  </nav>
+
+  <section class="faq-section" data-aos="fade-up">
+    <div class="container">
+      <h2 class="section-title">Frequently Asked Questions</h2>
+      
+      <div class="faq-container">
+        <div class="faq-intro">
+          <h3>Got Questions? We've Got Answers!</h3>
+          <p>Find answers to common questions about One Plant a Day, our mission, and how to make the most of your daily plant discoveries.</p>
+        </div>
+
+        <div class="faq-search">
+          <i class="fas fa-search search-icon"></i>
+          <input type="text" class="search-input" placeholder="Search frequently asked questions..." id="search-input">
+        </div>
+
+        <div class="faq-categories">
+          <button class="category-btn active" onclick="filterFAQs('all')">All</button>
+          <button class="category-btn" onclick="filterFAQs('general')">General</button>
+          <button class="category-btn" onclick="filterFAQs('technical')">Technical</button>
+          <button class="category-btn" onclick="filterFAQs('privacy')">Privacy</button>
+        </div>
+
+        <div id="faq-list">
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              What is One Plant a Day?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>One Plant a Day is a daily educational platform that features a different plant each day with fascinating facts, beautiful imagery, and interesting details about its habitat, uses, and unique characteristics.</p>
+                <p>Our goal is to foster a deeper connection between people and the natural world through accessible, engaging plant education.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              How often is new content added?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>We feature a new plant every single day! Our content is automatically updated daily, so you'll always have something new to discover when you visit.</p>
+                <p>You can also browse previous days using our calendar feature to explore plants you might have missed.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="technical">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              Do I need to create an account?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>No! One Plant a Day is completely free and requires no registration, login, or personal information.</p>
+                <p>Simply visit our website anytime to discover today's featured plant. No barriers, no hassle.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="privacy">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              Do you track user data or show ads?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Absolutely not! We believe in privacy-first design. One Plant a Day:</p>
+                <ul>
+                  <li>Does not collect personal information</li>
+                  <li>Does not use tracking cookies</li>
+                  <li>Does not display advertisements</li>
+                  <li>Does not require user accounts</li>
+                </ul>
+                <p>Our mission is pure education and inspiration, not data collection or monetization.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              Where do you get your plant information?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>All our plant information is carefully researched and verified from reputable botanical sources, scientific databases, and educational institutions.</p>
+                <p>We ensure accuracy while making the content accessible and engaging for all knowledge levels.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="technical">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              Can I access the site on mobile devices?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>Yes! One Plant a Day is fully responsive and optimized for all devices including smartphones, tablets, and desktop computers.</p>
+                <p>The experience is designed to be beautiful and functional regardless of your screen size.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="general">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              Can I suggest a plant to be featured?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>We love hearing from plant enthusiasts! While we don't currently have a formal submission process, we're always interested in learning about fascinating plants.</p>
+                <p>Feel free to reach out through our contact information if you have suggestions or interesting plant stories to share.</p>
+              </div>
+            </div>
+          </div>
+
+          <div class="faq-item" data-category="technical">
+            <button class="faq-question" onclick="toggleFAQ(this)">
+              What technologies power the site?
+              <i class="fas fa-chevron-down faq-icon"></i>
+            </button>
+            <div class="faq-answer">
+              <div class="faq-answer-content">
+                <p>One Plant a Day is built with modern web technologies:</p>
+                <ul>
+                  <li>HTML5, CSS3, and JavaScript for the frontend</li>
+                  <li>Bootstrap for responsive design</li>
+                  <li>AOS (Animate On Scroll) for smooth animations</li>
+                  <li>Google Sheets API for content management</li>
+                </ul>
+                <p>We prioritize performance, accessibility, and user experience in our technical choices.</p>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div class="no-results" id="no-results" style="display: none;">
+          <span class="icon">🔍</span>
+          <h4>No Results Found</h4>
+          <p>Try adjusting your search terms or browse all categories.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-section" data-aos="fade-up">
+    <div class="container">
+      <div class="contact-card">
+        <span class="icon">💬</span>
+        <h4>Still Have Questions?</h4>
+        <p>If you couldn't find the answer you were looking for, we'd love to help! Our team is passionate about plants and happy to assist with any questions about our platform or plant-related topics.</p>
+        <a href="about.html" class="btn btn-primary">
+          <i class="fas fa-info-circle"></i>
+          Learn More About Us
+        </a>
+      </div>
+    </div>
+  </section>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>One Plant a Day</h5>
+          <p>Daily plant knowledge for a greener, calmer mind.</p>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Quick Links</h5>
+          <ul>
+            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
+            <li><a href="today.html"><i class="fas fa-calendar-day"></i> Today's Plant</a></li>
+            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
+            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
+            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Resources</h5>
+          <ul>
+            <li><i class="fas fa-laptop"></i> Technologies Used: HTML/CSS/JS</li>
+            <li><i class="fas fa-database"></i> Database: SheetDB API</li>
+            <li><i class="fas fa-book"></i> Libraries: Bootstrap, AOS, GSAP</li>
+          </ul>
+        </div>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Privacy & Philosophy</h5>
+          <p><i class="fas fa-seedling"></i> "No login. No ads. No tracking."</p>
+          <p><i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+        </div>
+      </div>
+      <hr>
+      <div class="row">
+        <div class="col-12 text-center">
+          <p>&copy; 2025 One Plant a Day. All rights reserved.</p>
+        </div>
+      </div>
+    </div>
+  </footer>
+
+  <script src="no-wifi/bootstrap/js/bootstrap.bundle.min.js"></script>
+  <script src="no-wifi/aos/dist/aos.js"></script>
+  <script>
+    AOS.init();
+
+    function toggleFAQ(button) {
+      const faqItem = button.parentElement;
+      const isActive = faqItem.classList.contains('active');
+      
+      // Close all other FAQ items
+      document.querySelectorAll('.faq-item.active').forEach(item => {
+        if (item !== faqItem) {
+          item.classList.remove('active');
+        }
+      });
+      
+      // Toggle current item
+      faqItem.classList.toggle('active');
+    }
+
+    function filterFAQs(category) {
+      const faqItems = document.querySelectorAll('.faq-item');
+      const categoryBtns = document.querySelectorAll('.category-btn');
+      const noResults = document.getElementById('no-results');
+      
+      // Update active category button
+      categoryBtns.forEach(btn => btn.classList.remove('active'));
+      event.target.classList.add('active');
+      
+      let visibleCount = 0;
+      
+      faqItems.forEach(item => {
+        if (category === 'all' || item.dataset.category === category) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      noResults.style.display = visibleCount === 0 ? 'block' : 'none';
+    }
+
+    // Search functionality
+    document.getElementById('search-input').addEventListener('input', function(e) {
+      const searchTerm = e.target.value.toLowerCase();
+      const faqItems = document.querySelectorAll('.faq-item');
+      const noResults = document.getElementById('no-results');
+      let visibleCount = 0;
+      
+      faqItems.forEach(item => {
+        const question = item.querySelector('.faq-question').textContent.toLowerCase();
+        const answer = item.querySelector('.faq-answer-content').textContent.toLowerCase();
+        
+        if (question.includes(searchTerm) || answer.includes(searchTerm)) {
+          item.style.display = 'block';
+          visibleCount++;
+        } else {
+          item.style.display = 'none';
+        }
+      });
+      
+      noResults.style.display = visibleCount === 0 && searchTerm !== '' ? 'block' : 'none';
+    });
+  </script>
+</body>
+
+</html>
+
