@@ -75,7 +75,7 @@
     /* Featured Fun Facts Section */
     .featured-section {
       background-color: var(--background);
-      padding: 4rem 0;
+      padding: 1rem 0;
     }
 
     .fun-facts-card {
@@ -83,7 +83,7 @@
       border: 1px solid var(--border);
       border-radius: 12px;
       max-width: 100%;
-      padding: 2.5rem;
+      padding: 0.8rem 0.5rem;
       box-shadow: var(--shadow-md);
       transition: all 0.3s ease;
       margin: 0 auto;
@@ -115,6 +115,7 @@
       font-weight: 600;
       position: relative;
       padding-bottom: 0.5rem;
+      text-align: center;
     }
 
     .fun-facts-card h5::after {
@@ -137,7 +138,7 @@
     .fun-facts-card li {
       margin-bottom: 1rem;
       position: relative;
-      padding: 2rem;
+      padding: 0.5rem;
       line-height: 1.6;
       background: rgba(0, 128, 0, 0.1) !important;
       border-left: 5px solid green !important;
@@ -207,7 +208,7 @@
     }
 
     .category-card:hover img {
-      transform: scale(1.05);
+      transform: scale(1.3);
     }
 
     .category-overlay {
@@ -264,8 +265,13 @@
 .call-to-action .container {
       position: relative;
       z-index: 2;
-      /* keeps text above overlay */
+      background: var(--background);
+      padding: 1.5rem;
       margin-bottom: 2px;
+      border-top-left-radius: 60px;
+      border-top-right-radius: 60px;
+      border-bottom-right-radius: 60px;
+      opacity: 0.95;
     }
 
     .call-to-action h2 {
@@ -337,6 +343,7 @@
       border: 2px solid var(--border);
       border-left:5px solid green ;
       height: 100%;
+      width: 100%;
     }
 
     .stat-item i {
@@ -348,7 +355,7 @@
       font-size: 1.5rem;
       color: var(--text-dark);
       font-weight: 700;
-      margin-bottom: 0.5rem;
+      /* margin-bottom: 0.5rem; */
     }
 
     .stat-item p {
@@ -487,3 +494,20 @@
         margin: 0.5rem 0;
       }
     }
+    @media (max-width: 880px) {
+  .plant-statistics .row {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .plant-statistics .col-md-3 {
+    max-width: 100%;
+    flex: 0 0 100%;
+  }
+
+  .stat-item {
+    width: 90%;  /* so it doesn’t touch screen edges */
+    margin: 0 auto 1rem;
+  }
+}

@@ -1,0 +1,3 @@
+{
+  "extends": "@sweetalert2/stylelint-config"
+}

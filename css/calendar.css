@@ -166,7 +166,6 @@
 }
 
 .calendar-day.today {
-  color: var(--text-dark);
   background-color: var(--primary-blue);
   color: var(--background);
 }
@@ -298,10 +297,10 @@
 
 .preview-facts li {
   margin-bottom: 0.75rem;
- background: rgba(0, 128, 0, 0.1) !important;
-      border-left: 5px solid green !important;
-      border-radius: 8px;
-padding: 2rem;
+  background: rgba(0, 128, 0, 0.1) !important;
+  border-left: 5px solid green !important;
+  border-radius: 8px;
+  padding: 2rem;
   position: relative;
   color: var(--text-light);
   line-height: 1.6;
@@ -381,20 +380,124 @@ padding: 2rem;
     padding: 1rem;
   }
   
-  .calendar-table td {
-    height: 80px;
+  /* 🔹 Turn table into grid for mobile */
+  .calendar-table,
+  .calendar-table thead,
+  .calendar-table tbody,
+  .calendar-table tr,
+  .calendar-table td,
+  .calendar-table th {
+    display: block;
   }
-  
+
+  .calendar-table {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr); /* 2 days per row */
+    gap: 0.75rem;
+  }
+
+  .calendar-table thead {
+    display: none; /* hide weekday labels */
+  }
+
   .calendar-day {
-    padding: 0.5rem;
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 0.75rem;
+    height: auto;
   }
-  
+
   .day-number {
-    font-size: 0.875rem;
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
+  .plant-indicator {
+    font-size: 0.75rem;
   }
   
+  .preview-content {
+    padding: 1.5rem;
+    width: 95%;
+  }
+  
+  .calendar-legend {
+    padding: 1rem;
+  }
+  
+  .legend-items {
+    flex-direction: column;
+    gap: 1rem;
+  }
+}
+
+/* Responsive Design for Calendar Page */
+@media (max-width: 768px) {
+  .calendar-container {
+    margin: 0 1rem;
+  }
+  
+  .calendar-header {
+    padding: 1.5rem;
+  }
+  
+  .calendar-header h2 {
+    font-size: 1.75rem;
+  }
+  
+  .calendar-nav {
+    flex-direction: column;
+    gap: 1rem;
+  }
+  
+  .calendar-nav button {
+    padding: 0.625rem 1.25rem;
+  }
+  
+  .current-month {
+    font-size: 1.25rem;
+  }
+  
+  .calendar-grid {
+    padding: 1rem;
+  }
+  
+  /* 🔹 Turn table into single-column grid for mobile */
+  .calendar-table,
+  .calendar-table thead,
+  .calendar-table tbody,
+  .calendar-table tr,
+  .calendar-table td,
+  .calendar-table th {
+    display: block;
+  }
+
+  .calendar-table {
+    display: grid;
+    grid-template-columns: 1fr; /* ✅ 1 day per row (full width) */
+    gap: 0.75rem;
+  }
+
+  .calendar-table thead {
+    display: none; /* hide weekday labels */
+  }
+
+  .calendar-day {
+    border: 1px solid var(--border);
+    border-radius: 8px;
+    min-height: 90px;
+    padding: 0.75rem;
+    height: auto;
+  }
+
+  .day-number {
+    font-size: 1rem;
+    margin-bottom: 0.25rem;
+  }
+
   .plant-indicator {
-    font-size: 0.625rem;
+    font-size: 0.75rem;
   }
   
   .preview-content {
@@ -424,25 +527,26 @@ padding: 2rem;
   .calendar-grid {
     padding: 0.5rem;
   }
-  
-  .calendar-table td {
-    height: 60px;
+
+  /* 🔹 For very small screens, show 1 day per row */
+  .calendar-table {
+    grid-template-columns: 1fr;
   }
   
   .calendar-day {
-    padding: 0.25rem;
+    padding: 0.5rem;
+    min-height: 70px;
   }
   
   .day-number {
-    font-size: 0.75rem;
+    font-size: 0.875rem;
   }
   
   .plant-indicator {
-    display: none;
+    font-size: 0.65rem;
   }
   
   .preview-content {
     padding: 1rem;
   }
 }
-

@@ -1,0 +1,7 @@
+node_modules
+dist
+cypress/fixtures
+cypress/screenshots
+cypress/downloads
+.idea
+.vscode

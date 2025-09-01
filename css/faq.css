@@ -14,10 +14,10 @@
 .faq-intro {
   text-align: center;
   margin-bottom: 3rem;
-  padding: 2rem;
-  background-color: var(--surface);
-  border-radius: 12px;
-  border: 1px solid var(--border);
+ background: rgba(0, 128, 0, 0.1) !important;
+      border-left: 5px solid var(--success) !important;
+      border-radius: 8px;
+padding: 2rem;
 }
 
 .faq-intro h3 {
@@ -37,7 +37,7 @@
 /* FAQ Items */
 .faq-item {
   background-color: var(--background);
-  border: 1px solid var(--border);
+  border: none;
   border-radius: 8px;
   margin-bottom: 1rem;
   box-shadow: var(--shadow-sm);
@@ -50,7 +50,7 @@
 }
 
 .faq-item.active {
-  border-color: var(--primary-blue);
+  border: none;
   box-shadow: var(--shadow-md);
 }
 
@@ -67,34 +67,38 @@
   font-size: 1.125rem;
   font-weight: 600;
   color: var(--text-dark);
+  background: linear-gradient(90deg, rgba(0, 128, 0, 0.1), rgba(0, 128, 0, 0.05));
+      border-left: 5px solid var(--success);
   transition: all 0.2s ease;
 }
 
 .faq-question:hover {
-  background-color: var(--surface);
+  background-color: var(--primary-blue);
+  color: var(--background);
 }
 
 .faq-item.active .faq-question {
-  background-color: var(--surface);
-  color: var(--primary-blue);
+  background-color: var(--success);
+  color: var(--background);
 }
 
 .faq-icon {
   font-size: 1rem;
-  color: var(--text-light);
+  color: var(--text-dark);
   transition: transform 0.3s ease;
 }
 
-.faq-item.active .faq-icon {
+.faq-icon.active {
   transform: rotate(180deg);
-  color: var(--primary-blue);
+  color: var(--background);
 }
 
 .faq-answer {
   max-height: 0;
   overflow: hidden;
   transition: max-height 0.3s ease;
-  background-color: var(--background);
+ background: rgba(0, 128, 0, 0.096) !important;
+      border-left: 5px solid var(--success) !important;
 }
 
 .faq-item.active .faq-answer {
@@ -102,14 +106,14 @@
 }
 
 .faq-answer-content {
-  padding: 0 1.5rem 1.5rem;
+  padding:  0.5rem;
   color: var(--text-light);
   line-height: 1.7;
   font-size: 1rem;
 }
 
 .faq-answer-content p {
-  margin-bottom: 1rem;
+  margin: 0.5rem;
 }
 
 .faq-answer-content p:last-child {
@@ -117,8 +121,8 @@
 }
 
 .faq-answer-content ul {
-  padding-left: 1.5rem;
-  margin-bottom: 1rem;
+  padding-left: 0.5rem;
+  margin: 0.5rem;
 }
 
 .faq-answer-content li {
@@ -154,13 +158,14 @@
 }
 
 .category-btn:hover {
-  background-color: var(--border);
+  background-color: var(--primary-blue);
+  color: var(--background);
 }
 
 .category-btn.active {
-  background-color: var(--primary-blue);
+  background-color: var(--success);
   color: var(--background);
-  border-color: var(--primary-blue);
+  border-color: var(--background);
 }
 
 /* Search Box */

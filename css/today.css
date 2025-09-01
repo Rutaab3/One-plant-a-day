@@ -3,11 +3,11 @@
 /* Today's Plant Section */
 .today-section {
   background-color: var(--background);
-  padding: 4rem 0;
+  padding: 0.5rem;
 }
 
 .plant-container1 {
-  margin: 20px;
+  /* margin: 20px; */
   height: 100%;
 }
 
@@ -15,7 +15,7 @@
   background-color: var(--background);
   border: 1px solid var(--shadow-lg);
   border-radius: 12px;
-  padding: 2.5rem;
+  padding: 0.5rem;
   box-shadow: var(--shadow-md);
   transition: all 0.3s ease;
   max-width: 1000px;
@@ -44,10 +44,10 @@
   min-height: 100%;
   height: 500px;
   width: 500px;
-  border-radius: 8px;
   object-fit: cover;
-  box-shadow: var(--shadow-md);
+  border-radius: 12px;
   transition: transform 0.3s ease;
+  padding: 1rem;
 }
 
 .plant-card:hover .plant-image {
@@ -57,46 +57,45 @@
 .plant-title {
   color: var(--text-dark);
   text-align: center;
-  font-size: 2.7rem;
-  margin-top: 1rem;
+  font-size: 2rem;
   font-weight: 700;
   position: relative;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
    background: rgba(0, 128, 0, 0.1) !important;
       border-left: 5px solid green !important;
       border-radius: 8px;
-padding: 2rem;
+padding: 0.5rem;
 }
 
 .plant-subtitle {
   color: var(--text-light);
   font-size: 1.25rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
  background: rgba(0, 128, 0, 0.1) !important;
       border-left: 5px solid green !important;
       border-radius: 8px;
-padding: 2rem;
+padding: 0.5rem;
 }
 
 .plant-date {
   color: var(--text-light);
   font-size: 1.1rem;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
    background: rgba(0, 128, 0, 0.1) !important;
       border-left: 5px solid green !important;
       border-radius: 8px;
-padding: 2rem;
+padding: 0.5rem;
 }
 
 .plant-description {
   color: var(--text-light);
   font-size: 1.1rem;
   line-height: 1.6;
-  margin-bottom: 2rem;
+  margin-bottom: 0.5rem;
    background: rgba(0, 128, 0, 0.1) !important;
       border-left: 5px solid green !important;
       border-radius: 8px;
-padding: 2rem;      
+padding: 0.5rem;     
 }
 
 /* Plant Facts */
@@ -104,15 +103,15 @@ padding: 2rem;
   background-color: var(--surface);
   border-color: var(--border);
   border-radius: 8px;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .plant-facts h4 {
   color: var(--text-dark);
   font-size: 1.5rem;
   text-align: center;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   gap: 0.5rem;
 }
@@ -123,9 +122,10 @@ padding: 2rem;
 }
 
 .plant-facts li {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   position: relative;
-padding: 2rem;  line-height: 1.7;
+padding: 0.5rem;  
+line-height: 1.7;
   color: var(--text-light);
      background: rgba(0, 128, 0, 0.1) !important;
     border-left: 5px solid green !important;
@@ -139,14 +139,14 @@ padding: 2rem;  line-height: 1.7;
   background-color: var(--surface);
   border-color: var(--border);
   border-radius: 8px;
-  padding: 2rem;
-  margin-top: 2rem;
+  padding: 0.5rem;
+  margin-top: 0.5rem;
 }
 
 .plant-uses h4 {
   color: var(--text-dark);
   font-size: 1.5rem;
-  margin-bottom: 1.5rem;
+  margin-bottom: 0.5rem;
   font-weight: 600;
   text-align: center;
   gap: 0.5rem;
@@ -159,9 +159,9 @@ padding: 2rem;  line-height: 1.7;
 
 
 .plant-uses li {
-  margin-bottom: 1.25rem;
+  margin-bottom: 0.5rem;
   position: relative;
-  padding: 2rem ;
+  padding: 0.5rem ;
   line-height: 1.7;
   color: var(--text-light);
      background: rgba(0, 128, 0, 0.1) !important;
@@ -177,14 +177,14 @@ padding: 2rem;  line-height: 1.7;
   grid-template-columns: repeat(auto-fit, minmax(180px, 1fr));
   gap: 2rem;
   text-align: center;
-  margin-top: 2rem;
+  margin-top: 0.5rem;
 }
 
 .detail-card {
   background-color: var(--background);
   border: 1px solid var(--border);
   border-radius: 8px;
-  padding: 1.5rem;
+  padding: 0.5rem;
   box-shadow: var(--shadow-sm);
   transition: all 0.3s ease;
 }
@@ -313,7 +313,7 @@ padding: 2rem;  line-height: 1.7;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  padding: 2rem;
+  padding: 0.5rem;
   gap: 1rem;
   background-color: var(--surface);
   border-color: var(--border);}
@@ -321,7 +321,7 @@ padding: 2rem;  line-height: 1.7;
 /* Responsive Design for Today Page */
 @media (max-width: 768px) {
   .plant-card {
-    padding: 2rem;
+    padding: 0.5rem;
     margin: 0 1rem;
   }
   
@@ -329,7 +329,7 @@ padding: 2rem;  line-height: 1.7;
     width: 100%;
     max-width: 300px;
     height: 300px;
-    margin-bottom: 2rem;
+    margin-bottom: 0.5rem;
   }
   
   .plant-title {
@@ -343,7 +343,7 @@ padding: 2rem;  line-height: 1.7;
   }
   
   .plant-facts {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
   
   .plant-details {
@@ -352,7 +352,7 @@ padding: 2rem;  line-height: 1.7;
   }
   
   .detail-card {
-    padding: 1.25rem;
+    padding: 0.5rem;
   }
   
   .plant-navigation {
@@ -368,7 +368,7 @@ padding: 2rem;  line-height: 1.7;
 
 @media (max-width: 480px) {
   .plant-card {
-    padding: 1.5rem;
+    padding: 0.5rem;
   }
   
   .plant-image {
@@ -385,12 +385,12 @@ padding: 2rem;  line-height: 1.7;
   }
   
   .plant-facts {
-    padding: 1rem;
+    padding: 0.5rem;
   }
   
   .plant-facts li {
     font-size: 1rem;
-    padding-left: 2rem;
+    padding: 0.5rem;
   }
   
   .detail-card {
