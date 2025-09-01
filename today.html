@@ -65,46 +65,45 @@
       <div class="row">
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>One Plant a Day</h5>
-          <p>Daily plant knowledge for a greener, calmer mind.</p>
+          <p>Daily knowledge for a greener, calmer mind.</p>
+          <p> &copy; 2025 One Plant a Day. All reserved rights.</p>
+          <div class="social-icons">
+            <!-- Social icons can be added here -->
+          </div>
         </div>
+      
         <div class="col-lg-3 col-md-6 mb-4">
-          <h5>Quick Links</h5>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="today.html"><i class="fas fa-calendar-day"></i> Today's Plant</a></li>
-            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
-            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+          <h5>Tools/Technologies</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
           </ul>
         </div>
-        <div class="col-lg-3 col-md-6 mb-4">
-          <h5>Resources</h5>
-          <ul>
-            <li><i class="fas fa-laptop"></i> Technologies Used: HTML/CSS/JS</li>
-            <li><i class="fas fa-database"></i> Database: SheetDB API</li>
-            <li><i class="fas fa-book"></i> Libraries: Bootstrap, AOS, GSAP</li>
-          </ul>
-        </div>
+
         <div class="col-lg-3 col-md-6 mb-4">
           <h5>Privacy & Philosophy</h5>
-          <p><i class="fas fa-seedling"></i> "No login. No ads. No tracking."</p>
-          <p><i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+          <p> <i class="fas fa-seedling"></i> "No login. No ads. Just pure knowlegde for nature enthusiest."</p>
+          <p> <i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+        </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
+          </ul>
+        </div>
+
         </div>
       </div>
-      <hr>
-      <div class="row">
-        <div class="col-12 text-center">
-          <p>&copy; 2025 One Plant a Day. All rights reserved.</p>
-        </div>
-      </div>
-    </div>
-
-
   </footer>
 
   <!-- Scripts -->
-  <script src="no-wifi/bootstrap/js/bootstrap.bundle.min.js"></script>
+   <script src="no-wifi/bootstrap/js/bootstrap.bundle.min.js"></script>
   <script src="no-wifi/aos/dist/aos.js"></script>
+  <script src="no-wifi/gsap/dist/gsap.min.js"></script>
   <script>
     AOS.init();
 
@@ -157,40 +156,36 @@
         : "";
 
       document.getElementById("plant-container").innerHTML = `
-        <!-- Navigation buttons on top -->
-        <div class="text-center mb-4">
-          <button id="prev-btn" class="btn btn-outline-success me-2"><i class="fas fa-arrow-left"></i> Previous</button>
-          <button id="today-btn" class="btn btn-success me-2"><i class="fas fa-calendar-day"></i> Today</button>
-          <button id="next-btn" class="btn btn-outline-success"><i class="fas fa-arrow-right"></i> Next</button>
-        </div>
-
+   
         <div class="text-start">  
           <img src="${optimizedURL}" alt="${plant.plant_name}" class="plant-image mb-4" >
        <div class="plant-info">
   <h1 class="plant-title">${plant.plant_name}</h1>
-  <p class="plant-subtitle"><strong>Botanical Name:</strong><br> <em>${plant.botanical_name || "Scientific name not available"}</em></p>
-  <p class="plant-date"><strong>Date:</strong><br> <i class="fas fa-calendar"></i> ${plant.date || "No date"}</p>
-  <p class="plant-description"><strong>Description:</strong><br> ${plant.description || ""}</p>
+  <p class="plant-subtitle"><strong>Botanical Name: </strong><em>${plant.botanical_name || "Scientific name not available"}</em></p>
+  <p class="plant-date"><strong>Date: </strong><i class="fas fa-calendar"></i> ${plant.date || "No date"}</p>
+  <p class="plant-description"><strong>Description: </strong>${plant.description || ""}</p>
 </div>
 
 
         </div>
 
         <div class="plant-facts">
-          <h4>Fascinating Facts</h4>
+          <h4>F A C T S</h4>
           <ul>
-            <li>${plant.fact_1}</li>
-            <li>${plant.fact_2}</li>
-            <li>${plant.fact_3}</li>
+           <ul>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_1}</li>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_2}</li>
+              <li><i class="fas fa-lightbulb"></i> ${plant.fact_3}</li>
+            </ul>
           </ul>
         </div>
 
         <div class="plant-uses">
-          <h4>Uses</h4>
+          <h4>U S E S</h4>
           <ul>
-            <li>${plant.use_1}</li>
-            <li>${plant.use_2}</li>
-            <li>${plant.use_3}</li>
+            <li><i class="fas fa-leaf"></i>  ${plant.use_1}</li>
+            <li><i class="fas fa-leaf"></i>  ${plant.use_2}</li>
+            <li><i class="fas fa-leaf"></i>  ${plant.use_3}</li>
           </ul>
         </div>
 
@@ -202,13 +197,7 @@
         </div>
       `;
 
-      // Attach button events
-      document.getElementById("prev-btn").addEventListener("click", () => navigateDay(-1));
-      document.getElementById("next-btn").addEventListener("click", () => navigateDay(1));
-      document.getElementById("today-btn").addEventListener("click", () => {
-        currentPlantIndex = todayIndex;
-        displayPlant(plantsData[currentPlantIndex]);
-      });
+    
     }
 
     function navigateDay(step) {

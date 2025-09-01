@@ -65,28 +65,79 @@
     </div>
   </section>
 
-  <!-- Featured Fun Facts -->
-  <section class="featured-section" data-aos="fade-right">
-    <div class="container">
-      <h2 class="section-title text-center">Featured Fun Facts</h2>
-      <div id="fun-facts-carousel" class="fun-facts-card">
-        <div class="loading-state">Loading amazing plant facts...</div>
+
+  <!-- Featured Fun Facts and Plant Uses -->
+ <section class="featured-section">
+  <div class="container">
+    <div class="row align-items-stretch">
+      
+      <!-- Featured Fun Facts (Left) -->
+      <div class="col-md-6 mb-4 d-flex" data-aos="fade-right">
+        <div class="fun-facts-card w-100">
+          <h2 class="section-title text-center">Featured Fun Facts</h2>
+          <div id="fun-facts-carousel" class="card-content flex-grow-1">
+            <div class="loading-state">Loading amazing plant facts...</div>
+          </div>
+        </div>
       </div>
-    </div>
-  </section>
 
-  <!-- Featured Plant Uses -->
-  <section class="featured-section" data-aos="fade-left">
-    <div class="container">
-      <h2 class="section-title text-center">Featured Plant Uses</h2>
-      <div id="plant-uses-carousel" class="fun-facts-card">
-        <div class="loading-state">Loading plant uses...</div>
+      <!-- Featured Plant Uses (Right) -->
+      <div class="col-md-6 mb-4 d-flex" data-aos="fade-left">
+        <div class="fun-facts-card w-100">
+          <h2 class="section-title text-center">Featured Plant Uses</h2>
+          <div id="plant-uses-carousel" class="card-content flex-grow-1">
+            <div class="loading-state">Loading plant uses...</div>
+          </div>
+        </div>
       </div>
+
     </div>
-  </section>
+  </div>
+</section>
 
+  <!-- Statistics -->
+ <section class="plant-statistics">
+  <div class="container">
+    <h2 class="section-title text-center mb-5">Our Growing Community</h2>
+    <div class="row text-center">
+      
+      <div class="col-md-3 col-6 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="100">
+          <i class="fas fa-seedling fa-2x mb-2"></i>
+          <h3>365+</h3>
+          <p>Plants</p>
+        </div>
+      </div>
 
-  
+      <div class="col-md-3 col-6 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="200">
+          <i class="fas fa-users fa-2x mb-2"></i>
+          <h3>10K+</h3>
+          <p>Enthusiasts</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="300">
+          <i class="fas fa-globe fa-2x mb-2"></i>
+          <h3>50+</h3>
+          <p>Countries</p>
+        </div>
+      </div>
+
+      <div class="col-md-3 col-6 mb-3">
+        <div class="stat-item" data-aos="fade-up" data-aos-delay="400">
+          <i class="fas fa-shield-alt fa-2x mb-2"></i>
+          <h3>100%</h3>
+          <p>Ad-Free</p>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- plant categories -->
     <section class="plant-categories">
     <div class="container">
       <h2 class="section-title text-center mb-5">Explore Plant Diversity</h2>
@@ -131,18 +182,8 @@
     </div>
   </section>
 
-  <!-- Statistics -->
-  <section class="plant-statistics">
-    <div class="container">
-      <h2 class="section-title text-center mb-5">Our Growing Community</h2>
-      <div class="row">
-        <div class="col-md-3 col-6 mb-2"><div class="stat-item"><h3>365+</h3><p>Plants in Database</p></div></div>
-        <div class="col-md-3 col-6 mb-2"><div class="stat-item"><h3>10K+</h3><p>Enthusiasts</p></div></div>
-        <div class="col-md-3 col-6 mb-2"><div class="stat-item"><h3>50+</h3><p>Countries</p></div></div>
-        <div class="col-md-3 col-6 mb-2"><div class="stat-item"><h3>100%</h3><p>Ad-Free</p></div></div>
-      </div>
-    </div>
-  </section>
+
+
 
   <!-- Call to Action -->
   <section class="call-to-action m-0">
@@ -160,30 +201,41 @@
   <footer class="footer">
     <div class="container">
       <div class="row">
-        <div class="col-lg-3"><h5>One Plant a Day</h5><p>Daily plant knowledge for a greener, calmer mind.</p></div>
-        <div class="col-lg-3"><h5>Quick Links</h5>
-          <ul>
-            <li><a href="index.html"><i class="fas fa-home"></i> Home</a></li>
-            <li><a href="today.html"><i class="fas fa-calendar-day"></i> Today's Plant</a></li>
-            <li><a href="calendar.html"><i class="fas fa-calendar"></i> Calendar</a></li>
-            <li><a href="about.html"><i class="fas fa-info-circle"></i> About Us</a></li>
-            <li><a href="faq.html"><i class="fas fa-question-circle"></i> FAQ</a></li>
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>One Plant a Day</h5>
+          <p>Daily knowledge for a greener, calmer mind.</p>
+          <p> &copy; 2025 One Plant a Day. All reserved rights.</p>
+          <div class="social-icons">
+            <!-- Social icons can be added here -->
+          </div>
+        </div>
+      
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Tools/Technologies</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
           </ul>
         </div>
-        <div class="col-lg-3"><h5>Resources</h5>
-          <ul>
-            <li><i class="fas fa-laptop"></i> HTML/CSS/JS</li>
-            <li><i class="fas fa-database"></i> SheetDB API</li>
-            <li><i class="fas fa-book"></i> Bootstrap, AOS, GSAP</li>
+
+        <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Privacy & Philosophy</h5>
+          <p> <i class="fas fa-seedling"></i> "No login. No ads. Just pure knowlegde for nature enthusiest."</p>
+          <p> <i class="fas fa-earth"></i> "Made to inspire a connection with nature — one plant at a time."</p>
+        </div>
+
+         <div class="col-lg-3 col-md-6 mb-4">
+          <h5>Contact Info</h5>
+          <ul class="list-unstyled">
+            <p> <i class="fas fa-laptop"></i> HTML/CSS/JS</p>
+            <p> <i class="fas fa-database"></i> Googlesheet API</p>
+            <p> <i class="fas fa-book"></i> Bootstrap, AOS, GSAP</p>
           </ul>
         </div>
-        <div class="col-lg-3"><h5>Privacy</h5>
-          <p><i class="fas fa-seedling"></i> "No login. No ads. No tracking."</p>
+
         </div>
       </div>
-      <hr>
-      <div class="text-center"><p>&copy; 2025 One Plant a Day. All rights reserved.</p></div>
-    </div>
   </footer>
 
   <!-- Scripts -->

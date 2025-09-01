@@ -80,6 +80,11 @@ body {
   background: var(--secondary-navy);
 }
 
+::selection {
+  background-color: var(--success);
+  color: var(--background);
+}
+
 /* Typography */
 h1, h2, h3, h4, h5, h6 {
   font-weight: 600;
@@ -232,7 +237,7 @@ a:hover {
 }
 
 .btn-success:hover {
-  background-color: #047857;
+  background-color: var(--primary-blue);
   color: var(--background);
   transform: translateY(-1px);
   box-shadow: var(--shadow-md);
@@ -291,7 +296,7 @@ a:hover {
 .footer {
   background: var(--background);
   color: var(--background);
-  padding: 3rem 0 1.5rem;
+  padding: 1.5rem;
 }
 
 .footer h5 {

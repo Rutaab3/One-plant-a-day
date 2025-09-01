@@ -62,12 +62,41 @@
   font-weight: 700;
   position: relative;
   margin-bottom: 2rem;
+   background: rgba(0, 128, 0, 0.1) !important;
+      border-left: 5px solid green !important;
+      border-radius: 8px;
+padding: 2rem;
 }
 
 .plant-subtitle {
   color: var(--text-light);
   font-size: 1.25rem;
   margin-bottom: 2rem;
+ background: rgba(0, 128, 0, 0.1) !important;
+      border-left: 5px solid green !important;
+      border-radius: 8px;
+padding: 2rem;
+}
+
+.plant-date {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  margin-bottom: 2rem;
+   background: rgba(0, 128, 0, 0.1) !important;
+      border-left: 5px solid green !important;
+      border-radius: 8px;
+padding: 2rem;
+}
+
+.plant-description {
+  color: var(--text-light);
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 2rem;
+   background: rgba(0, 128, 0, 0.1) !important;
+      border-left: 5px solid green !important;
+      border-radius: 8px;
+padding: 2rem;      
 }
 
 /* Plant Facts */
@@ -96,8 +125,7 @@
 .plant-facts li {
   margin-bottom: 1.25rem;
   position: relative;
-  padding: 0.7rem 0.3rem;
-  line-height: 1.7;
+padding: 2rem;  line-height: 1.7;
   color: var(--text-light);
      background: rgba(0, 128, 0, 0.1) !important;
     border-left: 5px solid green !important;
@@ -133,7 +161,7 @@
 .plant-uses li {
   margin-bottom: 1.25rem;
   position: relative;
-  padding: 0.7rem 0.3rem;
+  padding: 2rem ;
   line-height: 1.7;
   color: var(--text-light);
      background: rgba(0, 128, 0, 0.1) !important;
@@ -222,7 +250,7 @@
 .plant-info strong {
   color: var(--primary-blue);     /* highlight color */
   font-weight: 800;               /* extra bold */
-  font-size: 2rem;               /* slightly bigger */
+  font-size: 1.25rem;           /*    slightly bigger */
   letter-spacing: 0.5px;          /* spacing for emphasis */
     margin-bottom: 2rem;
     text-align: center;

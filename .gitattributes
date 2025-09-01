@@ -1,0 +1,20 @@
+# Force consistent line endings for all text files to LF
+* text=auto eol=lf
+
+# Code files always LF
+*.js     text eol=lf
+*.css    text eol=lf
+*.html   text eol=lf
+*.php    text eol=lf
+*.json   text eol=lf
+*.md     text eol=lf
+*.csv     text eol=lf
+
+# Images and other binaries should never be modified or converted
+*.png    binary
+*.jpg    binary
+*.jpeg   binary
+*.gif    binary
+*.svg    binary
+*.webp   binary
+*.ico    binary
