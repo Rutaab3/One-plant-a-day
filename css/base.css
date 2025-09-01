@@ -127,12 +127,14 @@ a:hover {
   color: var(--secondary-navy);
 }
 
+.navbar , .footer{
+  background-color: rgba(223, 255, 176, 0.459);
+}
+
 /* Navigation Styles */
 .navbar {
-  background-color: var(--background);
-  box-shadow: var(--shadow-md);
   padding: 1rem 0;
-  border-bottom: 1px solid var(--border);
+  border-bottom: 1px solid var(--success);
 }
 
 .navbar-brand {
@@ -294,9 +296,13 @@ a:hover {
 
 /* Footer Styles */
 .footer {
-  background: var(--background);
-  color: var(--background);
-  padding: 1.5rem;
+  padding: 1rem;
+  border-top: 1px solid var(--success);
+  color: var(--text-dark);
+}
+
+.footer .container {
+  padding-top: 3rem;
 }
 
 .footer h5 {
@@ -379,7 +385,7 @@ a:hover {
 .py-3 { padding: 1.5rem 0; }
 
 /* Responsive Design */
-@media (max-width: 768px) {
+/* @media (max-width: 768px) {
   h1 { font-size: 2rem; }
   h2 { font-size: 1.75rem; }
   h3 { font-size: 1.25rem; }
@@ -392,5 +398,5 @@ a:hover {
   
   .navbar-brand { font-size: 1.25rem; }
   .footer { padding: 2rem 0 1rem; }
-}
+} */
 
