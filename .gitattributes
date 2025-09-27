@@ -9,6 +9,7 @@
 *.json   text eol=lf
 *.md     text eol=lf
 *.csv     text eol=lf
+*.md     text eol=lf
 
 # Images and other binaries should never be modified or converted
 *.png    binary
@@ -18,3 +19,4 @@
 *.svg    binary
 *.webp   binary
 *.ico    binary
+
